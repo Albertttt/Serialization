@@ -5,13 +5,16 @@ using System.IO;
 using System.Linq;
 using System.Net;
 
+//todo: методы элтого класса должны работать с нормальными объектами Inpt, Output, а не сбайтовыми массивами
 public class HttpClient
 {
+    //todo: сделай host, port параметром класса, а не методов
     public byte Ping(string host, int port)
     {
         HttpStatusCode status;
         Http_query("GET", host, port, "Ping", out status);
         if (status == HttpStatusCode.OK)
+            //todo: может лучше возвращать true/false?
             return 1;
         else
             return 0;

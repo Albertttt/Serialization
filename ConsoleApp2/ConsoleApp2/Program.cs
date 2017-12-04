@@ -41,6 +41,14 @@ namespace ConsoleApp
             return a;
         }
 
+
+        //todo: реализуйте интерфейс двумя классами - для json и для xml и используйте в коде ниже
+        interface IISerializer()
+        {
+            string Serialze(object obj);
+            object Deserialze(Type objType, string source);
+        }
+
         static void Main(string[] args)
         {
             String str1 = Console.ReadLine();
